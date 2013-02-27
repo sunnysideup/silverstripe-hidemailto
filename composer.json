@@ -1,5 +1,5 @@
 {
-	"name": "silverstripe/hidemailto",
+	"name": "sunnysideup/hidemailto",
 	"type": "silverstripe-module",
 	"description": "hide emails from spam bots within your Silverstripe application",
 	"homepage": "http://www.silverstripe-webdevelopment.com",
