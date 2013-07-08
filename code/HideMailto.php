@@ -1,7 +1,7 @@
 <?php
 
 
-class HideMailto extends SiteTreeDecorator {
+class HideMailto extends SiteTreeExtension {
 
 	protected static $email_field = "Email";
 		static function set_email_field($email_field) {self::$email_field = $email_field;}
@@ -104,7 +104,7 @@ class HideMailto extends SiteTreeDecorator {
 
 }
 
-class HideMailto_Role extends DataObjectDecorator {
+class HideMailto_Role extends DataExtension {
 
 	//member link
 
@@ -157,20 +157,20 @@ class HideMailto_Controller extends ContentController {
 		$domain = '';
 		$subject = '';
 		// We have two situations to deal with, where urlParams['Action'] is an int (assume Member ID), or a string (assume username)
-		if(is_numeric(Director::urlParam('Name'))) {
+		if(is_numeric($this->getRequest()->param('Name'))) {
 			// Action is numeric, assume it's a member ID and optional ID is the email subject
-			$member = DataObject::get_by_id('Member', (int)Director::urlParam('Name'));
+			$member = Member::get()->byID($this->getRequest()->param('Name'));
 			if(!$member) {
-				user_error("No member found with ID #" . Director::urlParam('Name'), E_USER_ERROR); // No member found with this ID, perhaps we could redirect a user back instead of giving them a 500 error?
+				user_error("No member found with ID #" . $this->getRequest()->param('Name'), E_USER_ERROR); // No member found with this ID, perhaps we could redirect a user back instead of giving them a 500 error?
 			}
 			list($user, $domain) = explode('@', $member->Email);
-			$subject = Director::urlParam('ID');
+			$subject = $this->getRequest()->param('ID');
 		}
 		else {
 			// Action is not numeric, assume that Action is the username, ID is the domain and optional OtherID is the email subject
-			$user = urldecode(Director::urlParam('Name'));
-			$domain = urldecode(Director::urlParam('URL'));
-			$subject = Director::urlParam('Subject');
+			$user = urldecode($this->getRequest()->param('Name'));
+			$domain = urldecode($this->getRequest()->param('URL'));
+			$subject = $this->getRequest()->param('Subject');
 		}
 		$emailString = "mailto: $user@$domain?subject=".$subject;
 		// Make sure the domain is in the allowed domains
