@@ -10,7 +10,7 @@
 
 
 
-Director::addRules(50, array(
+Director::addRules(100, array(
 	'mailto/$Name/$URL/$Subject' => 'HideMailto_Controller'
 ));
 
