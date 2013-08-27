@@ -3,14 +3,14 @@
 
 class HideMailto extends SiteTreeExtension {
 
-	protected static $email_field = "Email";
+	private static $email_field = "Email";
 		static function set_email_field($email_field) {self::$email_field = $email_field;}
 		static function get_email_field() {return self::$email_field;}
 
-	protected static $default_subject = "enquiry";
+	private static $default_subject = "enquiry";
 		static function set_default_subject($subject) {self::$default_subject = $subject;}
 
-	protected static $replace_characters = array(
+	private static $replace_characters = array(
 		"." => "&#x2e;",
 		"@" => "&#x40;",
 		"a" => "&#x61;",
