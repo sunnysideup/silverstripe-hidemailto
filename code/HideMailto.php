@@ -142,7 +142,7 @@ class HideMailto_Controller extends ContentController {
 		return $this->index();
 	}
 
-	function defaultAction() {
+	function defaultAction($action) {
 		return $this->index();
 	}
 
