@@ -1,0 +1,10 @@
+Member:
+  extensions:
+    - HideMailto_Role
+
+SiteTree:
+  extensions:
+    - HideMailto
+
+HideMailto:
+  email_field: 'Email'

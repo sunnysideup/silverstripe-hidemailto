@@ -1,0 +1,5 @@
+HideMailto_Controller:
+  allowed_domains: []
+
+HideMailto:
+  default_subject: "email from our website"
