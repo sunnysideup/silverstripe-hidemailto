@@ -4,11 +4,8 @@
 class HideMailto extends SiteTreeExtension {
 
 	private static $email_field = "Email";
-		static function set_email_field($email_field) {self::$email_field = $email_field;}
-		static function get_email_field() {return self::$email_field;}
 
 	private static $default_subject = "enquiry";
-		static function set_default_subject($subject) {self::$default_subject = $subject;}
 
 	private static $replace_characters = array(
 		"." => "&#x2e;",
@@ -23,8 +20,6 @@ class HideMailto extends SiteTreeExtension {
 		"h" => "&#x68;",
 		"i" => "&#x69;"
 	);
-		static function set_replace_characters($replace_characters) {self::$replace_characters = $replace_characters;}
-		static function get_replace_characters() {return self::$replace_characters;}
 
 	/**
 	 *
@@ -127,15 +122,7 @@ class HideMailto_Controller extends ContentController {
 	 *
 	 * TODO Maybe the default should be to allow the current domain only?
 	 */
-	static $allowed_domains = '*';
-
-	/**
-	 * @param mixed $domains Either an array of domains to allow, or the string
-	 * '*' to allow all domains.
-	 */
-	static function set_allowed_domains($domains) {
-		self::$allowed_domains = $domains;
-	}
+	private static $allowed_domains = '*';
 
 	function __construct($dataRecord = null) {
 		parent::__construct($dataRecord);
