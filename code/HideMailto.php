@@ -23,11 +23,12 @@ class HideMailto extends SiteTreeExtension {
 
 	/**
 	 *
-	 *
+	 * @param String $email
+	 * @param String $subject
 	 * @return Obj (MailTo, Text, Original, Subject)
 	 */
-	static function convert_email($email, $subject = '') {
-		$obj = new DataObject();
+	public static function convert_email($email, $subject = '') {
+		$obj = new ViewableData();
 		if(!$subject) {
 			$subject = self::$default_subject;
 		}
