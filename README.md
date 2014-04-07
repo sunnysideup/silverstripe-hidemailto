@@ -1,6 +1,4 @@
-###############################################
-Hide Mailto
-###############################################
+Hide Mailto================================================================================
 
 This module allows you to hide mailto statements
 so that spammers are less likely to pick up emails from
