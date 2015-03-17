@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<source xmlns="http://xml.phpdox.net/src">
+  <dir name="/var/www/_modules/hidemailto/trunk">
+    <file name="_config.php" size="596" time="2015-03-14T10:23:25+13:00" unixtime="1426281805" sha1="6fd2f196f6167c65c859b8d3182ddb443da0fe12" xml="tokens/_config.php.xml"/>
+    <dir name="code">
+      <file name="HideMailto.php" size="5974" time="2015-03-14T10:23:25+13:00" unixtime="1426281805" sha1="889b6db81ca76822c07c730545bad26815efe34f" xml="tokens/code/HideMailto.php.xml"/>
+    </dir>
+  </dir>
+</source>

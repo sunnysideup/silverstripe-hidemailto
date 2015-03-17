@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<source xmlns="http://xml.phpdox.net/token">
+  <file xmlns="http://xml.phpdox.net/src" path="/var/www/_modules/hidemailto/trunk/docs/en/phpdox/../../.." file="_config.php" realpath="/var/www/_modules/hidemailto/trunk/_config.php" size="596" time="2015-03-14T10:23:25+13:00" unixtime="1426281805" sha1="6fd2f196f6167c65c859b8d3182ddb443da0fe12" relative="_config.php"/>
+  <line no="1">
+    <token name="T_OPEN_TAG">&lt;?php</token>
+  </line>
+  <line no="2"/>
+  <line no="3">
+    <token name="T_COMMENT">//===================---------------- START hidemailto MODULE ----------------===================</token>
+  </line>
+  <line no="4">
+    <token name="T_COMMENT">//HideMailto_Controller::set_allowed_domains(array('mysite.co.nz'));</token>
+  </line>
+  <line no="5">
+    <token name="T_COMMENT">//DataObject::add_extension('Member', 'HideMailto_Role');</token>
+  </line>
+  <line no="6">
+    <token name="T_COMMENT">//DataObject::add_extension('SiteTree', 'HideMailto');</token>
+  </line>
+  <line no="7">
+    <token name="T_COMMENT">//HideMailto::set_email_field("Email");</token>
+  </line>
+  <line no="8">
+    <token name="T_COMMENT">//HideMailto::set_default_subject("email from our website");</token>
+  </line>
+  <line no="9">
+    <token name="T_COMMENT">//===================---------------- END hidemailto MODULE ----------------===================</token>
+  </line>
+  <line no="10"/>
+  <line no="11"/>
+  <line no="12"/>
+  <line no="13">
+    <token name="T_STRING">Director</token>
+    <token name="T_DOUBLE_COLON">::</token>
+    <token name="T_STRING">addRules</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+    <token name="T_LNUMBER">100</token>
+    <token name="T_PHPDOX_COMMA">,</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_ARRAY">array</token>
+    <token name="T_PHPDOX_OPEN_BRACKET">(</token>
+  </line>
+  <line no="14">
+    <token name="T_WHITESPACE">	</token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'mailto/$Name/$URL/$Subject'</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_DOUBLE_ARROW">=&gt;</token>
+    <token name="T_WHITESPACE"> </token>
+    <token name="T_CONSTANT_ENCAPSED_STRING">'HideMailto_Controller'</token>
+  </line>
+  <line no="15">
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_CLOSE_BRACKET">)</token>
+    <token name="T_PHPDOX_SEMICOLON">;</token>
+  </line>
+  <line no="16"/>
+  <line no="17"/>
+</source>

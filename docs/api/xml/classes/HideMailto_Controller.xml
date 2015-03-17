@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class xmlns="http://xml.phpdox.net/src" full="HideMailto_Controller" namespace="" name="HideMailto_Controller" abstract="false" final="false" start="119" end="199">
+  <file path="/var/www/_modules/hidemailto/trunk/docs/en/phpdox/../../../code" file="HideMailto.php" realpath="/var/www/_modules/hidemailto/trunk/code/HideMailto.php" size="5974" time="2015-03-14T10:23:25+13:00" unixtime="1426281805" sha1="889b6db81ca76822c07c730545bad26815efe34f" relative="code/HideMailto.php"/>
+  <docblock>
+    <description compact="Generates obfusticated links, and also holds the method called when /mailto/ is called via the URL. As noted above, take a look at the _config.php file to see how mailto/ maps to this class."/>
+  </docblock>
+  <extends full="ContentController" namespace="" name="ContentController"/>
+  <member name="allowed_domains" type="string" default="'*'" visibility="private" line="126">
+    <docblock>
+      <description compact="The list of allowed domains to create a mailto: link to. By default, allow all domains.">TODO Maybe the default should be to allow the current domain only?</description>
+    </docblock>
+  </member>
+  <constructor name="__construct" start="128" end="131" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="dataRecord" byreference="false" type="{unknown}" default="null"/>
+  </constructor>
+  <method name="defaultAction" start="133" end="135" abstract="false" final="false" static="false" visibility="public">
+    <parameter name="action" byreference="false" type="{unknown}"/>
+  </method>
+  <member name="url" type="string" default="''" visibility="public" line="137"/>
+  <method name="index" start="142" end="177" abstract="false" final="false" static="false" visibility="public">
+    <docblock>
+      <description compact="This is called by default when this controller is executed."/>
+    </docblock>
+    <inline>
+      <comment value="We have two situations to deal with, where urlParams['Action'] is an int (assume Member ID), or a string (assume username)" line="147"/>
+      <comment value="Action is numeric, assume it's a member ID and optional ID is the email subject" line="149"/>
+      <comment value="Make sure the domain is in the allowed domains" line="164"/>
+      <comment value="Create the redirect" line="166"/>
+    </inline>
+  </method>
+  <method name="RedirectBackURL" start="179" end="187" abstract="false" final="false" static="false" visibility="public"/>
+  <method name="makeMailtoString" start="190" end="198" abstract="false" final="false" static="false" visibility="protected">
+    <parameter name="user" byreference="false" type="{unknown}"/>
+    <parameter name="domain" byreference="false" type="{unknown}"/>
+    <parameter name="subject" byreference="false" type="string" default="''"/>
+  </method>
+</class>
