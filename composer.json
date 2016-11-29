@@ -3,8 +3,10 @@
     "type": "silverstripe-module",
     "description": "hide emails from spam bots within your Silverstripe application",
     "keywords": [
-        "hidemailto",
-        "silverstripe"
+        "Silverstripe-CMS",
+        "CMS",
+        "Silverstripe",
+        "hidemailto"
     ],
     "license": "Sunny Side Up (BSD-3-Clause and CUSTOM)",
     "authors": [
