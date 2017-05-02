@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<index xmlns="http://xml.phpdox.net/src" basedir="/var/www/_modules/hidemailto/trunk">
-  <namespace name="">
-    <class name="HideMailto" src="code/HideMailto.php" xml="classes/HideMailto.xml"/>
-    <class name="HideMailto_Role" src="code/HideMailto.php" xml="classes/HideMailto_Role.xml"/>
-    <class name="HideMailto_Controller" src="code/HideMailto.php" description="Generates obfusticated links, and also holds the method called when /mailto/ is called via the URL. As noted above, take a look at the _config.php file to see how mailto/ maps to this class." xml="classes/HideMailto_Controller.xml"/>
-  </namespace>
-</index>

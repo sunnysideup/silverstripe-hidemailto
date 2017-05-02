@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<class xmlns="http://xml.phpdox.net/src" full="HideMailto_Role" namespace="" name="HideMailto_Role" abstract="false" final="false" start="103" end="112">
-  <file path="/var/www/_modules/hidemailto/trunk/docs/en/phpdox/../../../code" file="HideMailto.php" realpath="/var/www/_modules/hidemailto/trunk/code/HideMailto.php" size="5974" time="2015-03-14T10:23:25+13:00" unixtime="1426281805" sha1="889b6db81ca76822c07c730545bad26815efe34f" relative="code/HideMailto.php"/>
-  <extends full="DataExtension" namespace="" name="DataExtension"/>
-  <method name="HideMailtoLink" start="107" end="109" abstract="false" final="false" static="false" visibility="public"/>
-</class>
