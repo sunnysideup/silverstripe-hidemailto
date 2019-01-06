@@ -43,7 +43,7 @@ class HideMailto extends SiteTreeExtension
         $obj->Subject = $subject;
         //$obj->OnClick = "jQuery(this).attr('href', HideMailto2Email('".self::get_dot_replacer()."', '".$array[0]."', '".$array[1]."', '".Convert::raw2mailto($subject)."')); return true;";
         //TO DO: add a JS function that puts the
-        Requirements::javascript(THIRDPARTY_DIR."/jquery/jquery.js");
+        Requirements::javascript('silverstripe/admin: thirdparty/jquery/jquery.js');
         //Requirements::javascript("hidemailto/javascript/HideMailto2Email.js");
         return $obj;
     }
@@ -103,6 +103,15 @@ class HideMailto extends SiteTreeExtension
     }
 }
 
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD:  extends DataExtension (ignore case)
+  * NEW:  extends DataExtension (COMPLEX)
+  * EXP: Check for use of $this->anyVar and replace with $this->anyVar[$this->owner->ID] or consider turning the class into a trait
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
 class HideMailto_Role extends DataExtension
 {
 

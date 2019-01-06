@@ -1,4 +1,4 @@
-Director:
+SilverStripe\Control\Director:
   rules:
     'mailto/$Name/$URL/$Subject': 'HideMailto_Controller'
 
