@@ -1,6 +1,6 @@
 {
     "name": "sunnysideup/hidemailto",
-    "type": "silverstripe-module",
+    "type": "silverstripe-vendormodule",
     "description": "hide emails from spam bots within your Silverstripe application",
     "keywords": [
         "Silverstripe-CMS",
