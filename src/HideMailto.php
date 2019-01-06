@@ -2,20 +2,31 @@
 
 namespace Sunnysideup\HideMailto;
 
-use SiteTreeExtension;
-use ViewableData;
-use Convert;
-use Requirements;
-use DataExtension;
-use ContentController;
-use Member;
-use Director;
+
+
+
+
+
+
+
+
+use SilverStripe\Control\Email\Email;
+use SilverStripe\View\ViewableData;
+use SilverStripe\Core\Convert;
+use SilverStripe\View\Requirements;
+use SilverStripe\CMS\Model\SiteTreeExtension;
+use SilverStripe\ORM\DataExtension;
+use SilverStripe\Security\Member;
+use Sunnysideup\HideMailto\HideMailto;
+use SilverStripe\Control\Director;
+use SilverStripe\CMS\Controllers\ContentController;
+
 
 
 
 class HideMailto extends SiteTreeExtension
 {
-    private static $email_field = "Email";
+    private static $email_field = Email::class;
 
     private static $default_subject = "enquiry";
 
@@ -193,7 +204,7 @@ class HideMailto_Controller extends ContentController
             // Create the redirect
             header("Location: " . $emailString);
             header("Refresh: 0; url=". $emailString);
-            echo $this->customise(array("RedirectBackURL" => $this->RedirectBackURL(), "Email" => $this->makeMailtoString($user, $domain, $subject)))->renderWith("HideMailto");
+            echo $this->customise(array("RedirectBackURL" => $this->RedirectBackURL(), "Email" => $this->makeMailtoString($user, $domain, $subject)))->renderWith(HideMailto::class);
             $emailString = $this->makeMailtoString($user, $domain, $subject);
         } else {
             user_error("We're not allowed to redirect to the domain '$domain', because it's not listed in the _config.php file", E_USER_ERROR);
