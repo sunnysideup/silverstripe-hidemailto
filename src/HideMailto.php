@@ -1,9 +1,32 @@
 <?php
 
+namespace Sunnysideup\HideMailto;
+
+
+
+
+
+
+
+
+
+use SilverStripe\Control\Email\Email;
+use SilverStripe\View\ViewableData;
+use SilverStripe\Core\Convert;
+use SilverStripe\View\Requirements;
+use SilverStripe\CMS\Model\SiteTreeExtension;
+use SilverStripe\ORM\DataExtension;
+use SilverStripe\Security\Member;
+use Sunnysideup\HideMailto\HideMailto;
+use SilverStripe\Control\Director;
+use SilverStripe\CMS\Controllers\ContentController;
+
+
+
 
 class HideMailto extends SiteTreeExtension
 {
-    private static $email_field = "Email";
+    private static $email_field = Email::class;
 
     private static $default_subject = "enquiry";
 
@@ -43,8 +66,8 @@ class HideMailto extends SiteTreeExtension
         $obj->Subject = $subject;
         //$obj->OnClick = "jQuery(this).attr('href', HideMailto2Email('".self::get_dot_replacer()."', '".$array[0]."', '".$array[1]."', '".Convert::raw2mailto($subject)."')); return true;";
         //TO DO: add a JS function that puts the
-        Requirements::javascript(THIRDPARTY_DIR."/jquery/jquery.js");
-        //Requirements::javascript("hidemailto/javascript/HideMailto2Email.js");
+        Requirements::javascript('silverstripe/admin: thirdparty/jquery/jquery.js');
+        //Requirements::javascript("sunnysideup/hidemailto: hidemailto/javascript/HideMailto2Email.js");
         return $obj;
     }
 
@@ -103,6 +126,15 @@ class HideMailto extends SiteTreeExtension
     }
 }
 
+
+/**
+  * ### @@@@ START REPLACEMENT @@@@ ###
+  * WHY: upgrade to SS4
+  * OLD:  extends DataExtension (ignore case)
+  * NEW:  extends DataExtension (COMPLEX)
+  * EXP: Check for use of $this->anyVar and replace with $this->anyVar[$this->owner->ID] or consider turning the class into a trait
+  * ### @@@@ STOP REPLACEMENT @@@@ ###
+  */
 class HideMailto_Role extends DataExtension
 {
 
@@ -172,7 +204,7 @@ class HideMailto_Controller extends ContentController
             // Create the redirect
             header("Location: " . $emailString);
             header("Refresh: 0; url=". $emailString);
-            echo $this->customise(array("RedirectBackURL" => $this->RedirectBackURL(), "Email" => $this->makeMailtoString($user, $domain, $subject)))->renderWith("HideMailto");
+            echo $this->customise(array("RedirectBackURL" => $this->RedirectBackURL(), "Email" => $this->makeMailtoString($user, $domain, $subject)))->renderWith(HideMailto::class);
             $emailString = $this->makeMailtoString($user, $domain, $subject);
         } else {
             user_error("We're not allowed to redirect to the domain '$domain', because it's not listed in the _config.php file", E_USER_ERROR);
