@@ -1,5 +1,17 @@
 <?php
 
+namespace Sunnysideup\HideMailto;
+
+use SiteTreeExtension;
+use ViewableData;
+use Convert;
+use Requirements;
+use DataExtension;
+use ContentController;
+use Member;
+use Director;
+
+
 
 class HideMailto extends SiteTreeExtension
 {

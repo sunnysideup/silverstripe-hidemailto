@@ -1,5 +1,10 @@
 <?php
 
+namespace Sunnysideup\HideMailto;
+
+use Director;
+
+
 //===================---------------- START hidemailto MODULE ----------------===================
 //HideMailto_Controller::set_allowed_domains(array('app.co.nz'));
 //DataObject::add_extension('Member', 'HideMailto_Role');

@@ -1,0 +1,4 @@
+mappings:
+  HideMailto: Sunnysideup\HideMailto\HideMailto
+  HideMailto_Role: Sunnysideup\HideMailto\HideMailto_Role
+  HideMailto_Controller: Sunnysideup\HideMailto\HideMailto_Controller
