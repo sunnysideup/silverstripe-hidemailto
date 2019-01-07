@@ -2,14 +2,6 @@
 
 namespace Sunnysideup\HideMailto;
 
-
-
-
-
-
-
-
-
 use SilverStripe\Control\Email\Email;
 use SilverStripe\View\ViewableData;
 use SilverStripe\Core\Convert;
@@ -20,9 +12,6 @@ use SilverStripe\Security\Member;
 use Sunnysideup\HideMailto\HideMailto;
 use SilverStripe\Control\Director;
 use SilverStripe\CMS\Controllers\ContentController;
-
-
-
 
 class HideMailto extends SiteTreeExtension
 {
