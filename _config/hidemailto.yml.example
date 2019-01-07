@@ -1,4 +1,4 @@
-HideMailto_Controller:
+HideMailtoController:
   allowed_domains: []
 
 HideMailto:

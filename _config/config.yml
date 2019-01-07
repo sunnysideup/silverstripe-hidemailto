@@ -1,5 +1,5 @@
 Member:
-    extensions: [HideMailto_Role]
+    extensions: [HideMailtoRole]
 SiteTree:
     extensions: [HideMailto]
 HideMailto:

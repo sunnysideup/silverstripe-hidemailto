@@ -1,6 +1,6 @@
 SilverStripe\Control\Director:
   rules:
-    'mailto/$Name/$URL/$Subject': 'HideMailto_Controller'
+    'mailto/$Name/$URL/$Subject': 'HideMailtoController'
 
 
 
