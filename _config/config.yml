@@ -1,6 +1,11 @@
-Member:
-    extensions: [HideMailtoRole]
-SiteTree:
-    extensions: [HideMailto]
-HideMailto:
+---
+name: HideMailto
+---
+SilverStripe\Security\Member:
+    extensions:
+        - Sunnysideup\HideMailto\HideMailtoRole
+SilverStripe\CMS\Model\SiteTree:
+    extensions:
+        - Sunnysideup\HideMailto\HideMailto
+Sunnysideup\HideMailto\HideMailto:
     email_field: Email
