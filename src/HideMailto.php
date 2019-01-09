@@ -56,7 +56,7 @@ class HideMailto extends SiteTreeExtension
         //$obj->OnClick = "jQuery(this).attr('href', HideMailto2Email('".self::get_dot_replacer()."', '".$array[0]."', '".$array[1]."', '".Convert::raw2mailto($subject)."')); return true;";
         //TO DO: add a JS function that puts the
         Requirements::javascript('silverstripe/admin: thirdparty/jquery/jquery.js');
-        //Requirements::javascript("sunnysideup/hidemailto: hidemailto/javascript/HideMailto2Email.js");
+        //Requirements::javascript("sunnysideup/hidemailto: client/javascript/HideMailto2Email.js");
         return $obj;
     }
 
